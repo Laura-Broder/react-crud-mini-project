@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-light-pink: #fff7f5;
+  --color-pink: #fbe0d8;
+  --color-till: #4d727e;
+  --color-grey: #283644;
+  --color-brown: #7a6552;
+}
+
+html {
+  min-height: 100vh;
+}
+body {
+  color: var(--color-light-pink);
+  background-color: var(--color-pink);
+  padding: 10px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-till);
+  min-height: 100vh;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 100%;
+  width: 100%;
+  transition: ease 0.5s all;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+a:hover {
+  text-decoration: underline;
+  font-size: 120%;
+}
+img {
+  width: 100%;
+}
+form {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  padding: 30px;
+  justify-content: center;
+}
+button {
+  background-color: var(--color-pink);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.474);
+  border: 1px solid rgba(0, 0, 0, 0.111);
+  border-radius: 3px;
+  padding: 5px 20px;
+  font-size: 1rem;
+  margin: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+input {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.474);
+  border: 1px solid rgba(0, 0, 0, 0.584);
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin: 10px auto;
+}
+header {
+  background-color: var(--color-grey);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  /* height: 100%; */
+}
+header h1 {
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+.credit {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+footer {
+  height: 100px;
+  background-color: var(--color-grey);
+  padding: 30px;
+}
+.content {
+  min-height: 100%;
+  position: relative;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  height: 400px;
+  width: 240px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.474);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--color-brown);
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.add-new-form {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.474);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--color-brown);
+  padding: 5px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.add-new-form-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.errorMsg {
+  width: 240px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.474);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--color-pink);
+  padding: 5px;
+  margin: 5px auto;
+  display: inline-block;
+  color: red;
+}
+.spinner-container {
+  font-size: 60px;
+  color: #66ccff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+.spinner {
+  animation: spinner 12s linear infinite;
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
